@@ -1,0 +1,7 @@
+
+import csv
+
+csvfile = open('countries.csv', 'r')
+reader = csv.DictReader(csvfile)
+data = list(reader)
+csvfile.close()

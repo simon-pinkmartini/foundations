@@ -1,0 +1,30 @@
+#1 How many accidents are in the file:
+#count no. of lines in the file, minus 1
+ wc -l OSHA\ fatalities\ FY2017.csv
+#ANSWER = 397
+
+#2 Companies involved in explosions
+#search for "explosion" and count lines of result
+ grep explosion OSHA\ fatalities\ FY2017.csv | wc -l
+#ANSWER = 9
+
+#3 2017 Accidents only
+#search for "2017" and count lines of result
+ grep 2017 OSHA\ fatalities\ FY2017.csv | wc -l
+#ANSWER = 120
+
+#4 Show only first line of file
+ head -1 OSHA\ fatalities\ FY2017.csv
+
+#5 Forklift accidents only, put into new file
+ grep forklift OSHA\ fatalities\ FY2017.csv > forklifts
+ wc -l forklifts
+#ANSWER = 12
+
+#6 Christmas eve accidents only, put into new file
+ grep 12/24 OSHA\ fatalities\ FY2017.csv > x-eve
+ wc -l x-eve
+#ANSWER = 2
+
+#7 Accidents involving trees (exact search to exclude "Street"), put into new file
+ grep -w tree OSHA\ fatalities\ FY2017.csv > trees
