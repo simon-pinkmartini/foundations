@@ -1,0 +1,1 @@
+Download "subset.zip" from courseworks2.columbia.edu - it's in the "08.5 - Regex" folder

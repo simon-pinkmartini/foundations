@@ -1,0 +1,37 @@
+HOW GREP WORKS (WINDOWS)
+========================
+
+You get the same basics as OS X, but the advanced stuff is a little different. When you type "grep" it's actually calling "Select-String" which is a PowerShell thing. You can find examples at https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.utility/select-string or use "man grep".
+
+Search for something in a file, NOT case sensitive
+
+  grep "searchstring" file.txt
+
+Search in a file using a regular expression
+
+  grep "\d\d\d\d" file.txt
+
+HOW GREP WORKS (OS X)
+=====================
+
+"man grep" will show you the manual, but probably better is to google for "grep examples"
+
+For example: http://www.fastwebhost.in/blog/grep-command-in-unix-linux-with-11-simple-examples/
+
+Search for a string in one file
+
+  grep "searchstring" file.txt
+
+Search for a string in one file, ignoring case
+
+  grep -i "searchstring" file.txt
+
+Search for a string across many files
+
+  grep "searchstring" *.txt
+
+
+-o only shows the matching parts of lines
+-n shows the line numbers
+-C 3 shows 3 lines before/after the matching line
+-h don't show the filename

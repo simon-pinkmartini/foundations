@@ -1,0 +1,15 @@
+http://www.regular-expressions.info/shorthand.html
+
+SHORTHAND
+
+\d      [0-9]
+\w      [A-Za-z0-9_] (sometimes breaks on non-English characters)
+\s      [ \t\r\n\f] (tab, return, newline, formfeed (what??))
+\b      word boundary
+^       beginning of line
+$       end of line
+\A      start of ENTIRE STRING
+\Z      end of ENTIRE STRING
+.       anything
+[\s\S]  like ., but matches newlines, too
+.*?     match as much as you can, BUT don't go over other possible matches
