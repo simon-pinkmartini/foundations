@@ -1,0 +1,3 @@
+All available Keno sales data, by zip code, from 2000-2014 from the Massachusetts State Lottery
+
+https://www.muckrock.com/foi/massachusetts-1/massachusetts-keno-sales-data-by-zip-code-15712/

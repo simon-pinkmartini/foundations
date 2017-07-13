@@ -1,0 +1,77 @@
+---
+
+title: Dealing with PDFs
+
+---
+
+## PDF- and image-related tools
+
+### Tabula: Convert table-based PDF into spreadsheets
+
+  * [http://tabula.technology/](http://tabula.technology/)
+  * Convert table-based data into spreadsheets
+  * Can't be images, though
+  * **Install:** [Download from their site](http://tabula.technology/)
+
+### PDFMiner: Python PDF Parser
+
+  * [https://github.com/pdfminer/pdfminer.six](https://github.com/pdfminer/pdfminer.six) (the default version is Python 2, this is the Python 3 version)
+  * Open PDF files in Python
+  * Installs the `pdf2txt.py` tool for the command line
+  * ...which probably won't work on OS X, you'll need to use dos2unix to convert it
+  * **Install:** `pip install pdfminer.six`
+
+### PDFQuery
+
+  * [https://github.com/jcushman/pdfquery](https://github.com/jcushman/pdfquery)
+  * Search PDFs with XPath in Python, kiiiind of
+  * `in_bbox(..)`, `overlays_bbox(..)`, `contains(..)`
+  * Coordinates from LOWER LEFT
+  * **Install:** `pip install pdfquery`
+
+### Tesseract: Converts images to text
+
+  * [https://github.com/tesseract-ocr/tesseract](https://github.com/tesseract-ocr/tesseract)
+  * Free, open-source OCR (optical character recognition) software
+  * Convert images to text
+  * **Install (OS X):** `brew install tesseract`
+  * **Install (Windows):** Download the 3.05 version [from here](https://github.com/UB-Mannheim/tesseract/wiki). If you want non-English language ability pay attention during installation!
+  * **Install (Windows, Part 2):** If you want to run it from the command line without typing out the entire path, it needs to be added to the PATH or you can cheat and run this command `cmd /c mklink C:\Windows\System32 "C:\Program Files (x86)\Tesseract-OCR\tesseract.exe"
+
+### Pytesseract: Tesseract bindings for Python
+
+  * [https://github.com/madmaze/pytesseract](https://github.com/madmaze/pytesseract)
+  * Allows you to use tesseract from Python
+  * **Install:** `pip install pytesseract`
+
+### Cometdocs
+
+  * [https://www.cometdocs.com/](https://www.cometdocs.com/)
+  * Not a tool on your computer, but sometimes you're too lazy to run Tabula and you know Cometdocs will work
+
+### Other tools (may cost $$$)
+
+  * [ABBYY FineReader](https://www.abbyy.com/en-us/finereader/) / [OS X Version](https://www.abbyy.com/en-us/finereader/pro-for-mac/)
+  * [Omnipage](https://www.nuance.com/print-capture-and-pdf-solutions/optical-character-recognition/omnipage.html)
+  * Might want to give a read-through of [You Got the Documents. Now What?](https://source.opennews.org/articles/you-got-documents-now-what/) by Jonathan Stray
+
+## Other tools and sites
+
+### Imagemagick
+
+  * [https://www.imagemagick.org/script/index.php](https://www.imagemagick.org/script/index.php)
+  * Convert between different image formats
+  * Useful for to convert PDF to PNG for tesseract - for example, `convert -density 300 file.pdf -quality 90 output.png`
+  * **OSX install:** `brew install imagemagick` 
+  * **Windows install:** [Download the installer](https://www.imagemagick.org/script/download.php#windows)
+
+### Muckrock: Open FOIA requests
+
+  * [https://www.muckrock.com](https://www.muckrock.com)
+  * Open FOIA/FOIL requests
+  * Searching for [Completed requests](https://www.muckrock.com/foi/list/?q=&status=done&user-autocomplete=&agency-autocomplete=&jurisdiction-autocomplete=&projects-autocomplete=&tags-autocomplete=&has_embargo=&has_crowdfund=&minimum_pages=&date_range_0=&date_range_1=) is a great way to find "real" documents to work on
+
+### DocumentCloud
+
+  * [https://www.documentcloud.org/](https://www.documentcloud.org/)
+  * The gold standard for journalists doing things with documents
